@@ -1,0 +1,346 @@
+/* ==========================================
+   RESPONSIVE.CSS
+   SA PORTÕES
+========================================== */
+
+/* ==========================================
+   Notebook (até 1200px)
+========================================== */
+
+@media (max-width:1200px){
+
+    header{
+        padding:0 5%;
+    }
+
+    section{
+        padding:90px 5%;
+    }
+
+    .hero h1{
+        font-size:50px;
+    }
+
+}
+
+/* ==========================================
+   Tablet (até 992px)
+========================================== */
+
+@media (max-width:992px){
+
+    header{
+
+        height:auto;
+
+        padding:20px;
+
+        flex-direction:column;
+
+        gap:20px;
+
+    }
+
+    nav{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        gap:20px;
+
+    }
+
+    .hero{
+
+        padding-top:180px;
+
+    }
+
+    .hero h1{
+
+        font-size:42px;
+
+    }
+
+    .hero p{
+
+        font-size:18px;
+
+    }
+
+    .cards{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .gallery{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+/* ==========================================
+   Celulares (até 768px)
+========================================== */
+
+@media (max-width:768px){
+
+    header{
+
+        padding:20px;
+
+    }
+
+    .logo{
+
+        font-size:24px;
+
+    }
+
+    nav{
+
+        flex-direction:column;
+
+        align-items:center;
+
+        width:100%;
+
+        gap:15px;
+
+    }
+
+    nav a{
+
+        font-size:16px;
+
+    }
+
+    .btn-menu{
+
+        width:100%;
+
+        text-align:center;
+
+    }
+
+    .hero{
+
+        min-height:90vh;
+
+        padding:180px 20px 80px;
+
+    }
+
+    .hero h1{
+
+        font-size:34px;
+
+        line-height:1.2;
+
+    }
+
+    .hero p{
+
+        font-size:17px;
+
+    }
+
+    .btn-principal{
+
+        width:100%;
+
+        max-width:320px;
+
+        text-align:center;
+
+    }
+
+    section{
+
+        padding:70px 20px;
+
+    }
+
+    .section-title h2{
+
+        font-size:32px;
+
+    }
+
+    .cards{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .gallery{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .card{
+
+        padding:25px;
+
+    }
+
+    input,
+    textarea,
+    select{
+
+        font-size:16px;
+
+    }
+
+    footer{
+
+        padding:40px 20px;
+
+    }
+
+}
+
+/* ==========================================
+   Celulares Pequenos (até 480px)
+========================================== */
+
+@media (max-width:480px){
+
+    .hero h1{
+
+        font-size:28px;
+
+    }
+
+    .hero p{
+
+        font-size:16px;
+
+    }
+
+    .section-title h2{
+
+        font-size:28px;
+
+    }
+
+    .logo{
+
+        font-size:22px;
+
+    }
+
+    .btn-menu{
+
+        padding:12px;
+
+        font-size:15px;
+
+    }
+
+    .btn-principal{
+
+        font-size:16px;
+
+        padding:15px;
+
+    }
+
+    .whatsapp{
+
+        width:55px;
+
+        height:55px;
+
+        font-size:28px;
+
+        right:15px;
+
+        bottom:15px;
+
+    }
+
+}
+
+/* ==========================================
+   Monitores Grandes (acima de 1400px)
+========================================== */
+
+@media (min-width:1400px){
+
+    .hero h1{
+
+        font-size:72px;
+
+    }
+
+    .hero p{
+
+        font-size:22px;
+
+    }
+
+    section{
+
+        padding:120px 10%;
+
+    }
+
+}/* ==========================================
+   MENU MOBILE
+========================================== */
+
+@media(max-width:768px){
+
+    .menu-toggle{
+
+        display:block;
+
+    }
+
+    nav{
+
+        display:none;
+
+        flex-direction:column;
+
+        width:100%;
+
+        background:#111;
+
+        position:absolute;
+
+        top:80px;
+
+        left:0;
+
+        padding:20px;
+
+    }
+
+    nav.show{
+
+        display:flex;
+
+    }
+
+    nav a{
+
+        padding:12px 0;
+
+        text-align:center;
+
+    }
+
+    .btn-menu{
+
+        display:none;
+
+    }
+
+}

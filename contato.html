@@ -1,1 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato | SA Portões</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <style>
+        :root {
+            --bg-dark: #080b11;
+            --bg-card: #0f172a;
+            --blue-main: #2563eb;
+            --blue-glow: #3b82f6;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-color: #1e293b;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        body { background-color: var(--bg-dark); color: var(--text-main); }
+
+        header {
+            background-color: rgba(8, 11, 17, 0.9);
+            border-bottom: 1px solid var(--border-color);
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo { font-size: 24px; font-weight: 800; color: #fff; text-decoration: none; }
+        .logo span { color: var(--blue-glow); }
+
+        nav a { color: var(--text-muted); text-decoration: none; margin-left: 20px; font-weight: 500; }
+        nav a.active { color: var(--blue-glow); }
+
+        .container {
+            max-width: 1100px;
+            margin: 60px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 40px;
+            border-radius: 12px;
+        }
+
+        h2 { margin-bottom: 20px; font-size: 24px; }
+
+        .form-group { margin-bottom: 18px; }
+        label { display: block; font-size: 14px; color: var(--text-muted); margin-bottom: 6px; }
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            background: #1e293b;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            color: #fff;
+            outline: none;
+        }
+
+        input:focus, select:focus, textarea:focus { border-color: var(--blue-glow); }
+
+        .btn-send {
+            width: 100%;
+            background: linear-gradient(135deg, var(--blue-main), var(--blue-glow));
+            color: #fff;
+            padding: 14px;
+            border: none;
+            border-radius: 6px;
+            font-weight: 700;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .btn-send:hover { opacity: 0.9; }
+
+        .info-item { display: flex; gap: 15px; margin-bottom: 20px; }
+        .info-item i { color: var(--blue-glow); font-size: 20px; }
+
+        @media (max-width: 768px) { .container { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">SA <span>Portões</span></a>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="contato.html" class="active">Contato</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <h2>Solicitar Orçamento</h2>
+            <form id="form-whatsapp">
+                <div class="form-group">
+                    <label>Seu Nome</label>
+                    <input type="text" id="nome" required placeholder="Digite seu nome">
+                </div>
+                <div class="form-group">
+                    <label>Telefone / WhatsApp</label>
+                    <input type="tel" id="telefone" required placeholder="(27) 99865-7064">
+                </div>
+                <div class="form-group">
+                    <label>Serviço Desejado</label>
+                    <select id="servico" required>
+                        <option value="Portões Automáticos">Portões Automáticos</option>
+                        <option value="Câmeras / CFTV">Câmeras / CFTV</option>
+                        <option value="Cerca Elétrica">Cerca Elétrica</option>
+                        <option value="Manutenção Geral">Manutenção Geral</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Mensagem</label>
+                    <textarea id="mensagem" rows="4" placeholder="Descreva o que precisa..."></textarea>
+                </div>
+                <button type="submit" class="btn-send"><i class="fa-brands fa-whatsapp"></i> Enviar via WhatsApp</button>
+            </form>
+        </div>
+
+        <div class="card">
+            <h2>Informações</h2>
+            <div class="info-item">
+                
+                <div>
+                    
+                   
+                </div>
+            </div>
+            <div class="info-item">
+                <i class="fa-solid fa-phone"></i>
+                <div>
+                    <strong>Telefone / WhatsApp</strong>
+                    <p>(27) 99865-7064</p>
+                </div>
+            </div>
+            <div class="info-item">
+                <i class="fa-solid fa-clock"></i>
+                <div>
+                    <strong>Horário</strong>
+                    <p>Segunda a Sábado: Sem determinação de horário</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('form-whatsapp').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const num = "5527998657064";
+            const nome = document.getElementById('nome').value;
+            const tel = document.getElementById('telefone').value;
+            const serv = document.getElementById('servico').value;
+            const msg = document.getElementById('mensagem').value;
+
+            const txt = `*Solicitação de Orçamento - SA Portões*%0A%0A*Nome:* ${encodeURIComponent(nome)}%0A*Telefone:* ${encodeURIComponent(tel)}%0A*Serviço:* ${encodeURIComponent(serv)}%0A*Mensagem:* ${encodeURIComponent(msg)}`;
+            window.open(`https://wa.me/${num}?text=${txt}`, '_blank');
+        });
+    </script>
+</body>
+</html>

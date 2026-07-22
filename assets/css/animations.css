@@ -1,0 +1,360 @@
+/* ==========================================
+   ANIMATIONS.CSS
+   SA PORTÕES
+========================================== */
+
+/* ===============================
+   Fade In
+================================== */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+.fade-in{
+    animation: fadeIn 1s ease forwards;
+}
+
+/* ===============================
+   Fade Up
+================================== */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+        transform:translateY(50px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+.fade-up{
+
+    animation:fadeUp .8s ease forwards;
+
+}
+
+/* ===============================
+   Slide Left
+================================== */
+
+@keyframes slideLeft{
+
+    from{
+
+        opacity:0;
+        transform:translateX(-80px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateX(0);
+
+    }
+
+}
+
+.slide-left{
+
+    animation:slideLeft .8s ease forwards;
+
+}
+
+/* ===============================
+   Slide Right
+================================== */
+
+@keyframes slideRight{
+
+    from{
+
+        opacity:0;
+        transform:translateX(80px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateX(0);
+
+    }
+
+}
+
+.slide-right{
+
+    animation:slideRight .8s ease forwards;
+
+}
+
+/* ===============================
+   Zoom
+================================== */
+
+@keyframes zoom{
+
+    from{
+
+        opacity:0;
+        transform:scale(.8);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:scale(1);
+
+    }
+
+}
+
+.zoom{
+
+    animation:zoom .8s ease forwards;
+
+}
+
+/* ===============================
+   Hero
+================================== */
+
+.hero h1{
+
+    animation:fadeUp 1s ease;
+
+}
+
+.hero p{
+
+    animation:fadeUp 1.3s ease;
+
+}
+
+.hero .btn-principal{
+
+    animation:fadeUp 1.6s ease;
+
+}
+
+/* ===============================
+   Cartões
+================================== */
+
+.card{
+
+    transition:
+    transform .4s ease,
+    box-shadow .4s ease,
+    border-color .4s ease;
+
+}
+
+.card:hover{
+
+    transform:
+    translateY(-10px)
+    scale(1.02);
+
+    box-shadow:
+    0 15px 35px rgba(0,123,255,.25);
+
+}
+
+/* ===============================
+   Botões
+================================== */
+
+.btn-menu,
+.btn-principal,
+button{
+
+    transition:
+    .3s;
+
+}
+
+.btn-menu:hover,
+.btn-principal:hover,
+button:hover{
+
+    transform:
+    translateY(-3px);
+
+}
+
+/* ===============================
+   Imagens
+================================== */
+
+.gallery img{
+
+    transition:
+    .4s;
+
+}
+
+.gallery img:hover{
+
+    transform:
+    scale(1.05);
+
+}
+
+/* ===============================
+   Logo
+================================== */
+
+.logo{
+
+    transition:.3s;
+
+}
+
+.logo:hover{
+
+    transform:scale(1.05);
+
+}
+
+/* ===============================
+   Menu
+================================== */
+
+nav a{
+
+    position:relative;
+
+}
+
+nav a::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:0;
+
+    height:2px;
+
+    left:0;
+
+    bottom:-6px;
+
+    background:#007BFF;
+
+    transition:.3s;
+
+}
+
+nav a:hover::after{
+
+    width:100%;
+
+}
+
+/* ===============================
+   WhatsApp
+================================== */
+
+.whatsapp{
+
+    animation:pulse 2s infinite;
+
+}
+
+@keyframes pulse{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.12);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+/* ===============================
+   Scroll Reveal
+================================== */
+
+.reveal{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    transition:all .8s ease;
+
+}
+
+.reveal.active{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/* ===============================
+   Títulos
+================================== */
+
+.section-title{
+
+    animation:fadeUp .8s ease;
+
+}
+
+/* ===============================
+   Suavidade geral
+================================== */
+
+img{
+
+    transition:.4s;
+
+}
+
+a{
+
+    transition:.3s;
+
+}
+
+button{
+
+    transition:.3s;
+
+}
